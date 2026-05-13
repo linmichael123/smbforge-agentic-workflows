@@ -144,7 +144,8 @@ flowchart TD
     style TB fill:#fff3e0,stroke:#f57c00
 ```
 
-See the [full architecture docs](architecture/) for detailed flow diagrams and component breakdowns.
+See the [full architecture docs](architecture/) for detailed flow diagrams and component breakdowns.  \
+Explore → [architecture/](architecture/) · [docs/](docs/) · [examples/](examples/)
 
 ---
 
@@ -163,15 +164,32 @@ See the [full architecture docs](architecture/) for detailed flow diagrams and c
 | **Owner UI** | Telegram Bot (LLM-native, 27 tool declarations) |
 | **Deployment** | Cloudflare + macOS LaunchAgents |
 
+Explore → [docs/how-it-works.md](docs/how-it-works.md) for architecture deep-dive · [docs/results-metrics.md](docs/results-metrics.md) for production data
+
 ---
 
 ## Production Results
 
-- **Saves customers 5+ hours/week** of admin work — phone tag, scheduling, invoicing
-- **Pays for itself** after saving just 2 hours/month
-- **24/7 uptime** — Cloudflare Workers edge deployment
-- **Data stays in customer's Google accounts** — they retain full ownership
-- **10DLC compliant** — carrier-approved business SMS (not spam-filtered)
+| System Scale | Value |
+|-------------|-------|
+| Leads in pipeline | **8,279** |
+| Conversations handled | **130+** SMS conversations |
+| Voice AI calls | Live on **+1 (949) 565-1908** |
+| Daily cold SMS | 10/day (10DLC carrier-approved) |
+| Form-eligible leads | 5,128 |
+
+**Agent Performance:** < 1% bot unresponsive rate · > 80% journey completion · All critical escalations flagged correctly.
+
+**Infrastructure:** Cloudflare Workers + D1 + KV at $0/mo. Total monthly infra ~$60 (variable with usage). 99.9%+ uptime across all components.
+
+**Customer Value:**
+- Emergency calls at 2 AM → no more voicemail black hole — AI answers and escalates instantly.
+- Simultaneous inbound handling — AI manages multiple conversations at once while the owner works.
+- Auto-generated invoices replace 5+ hours/week of manual admin.
+
+**Comparative:** Saves 5-15+ hours/week for $49-$199/mo. A full-time receptionist costs $3,100/mo and only covers business hours.
+
+Explore the [detailed production metrics](docs/results-metrics.md) for full tables and comparative pricing.
 
 ---
 
