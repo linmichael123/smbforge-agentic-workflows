@@ -1,8 +1,20 @@
-# Media Assets — Screenshots to Add
+# Media Assets — Visuals for GitHub README
 
-This repo is designed to be copy-pasted as a GitHub README. The markdown and diagrams render beautifully on GitHub. **However, real screenshots make the repo come alive for hiring managers.**
+This directory contains visual artifacts that render inline on GitHub. 
 
-Below are the specific screenshots you should take from your live system and how to name them.
+## Already Generated (SVG)
+
+These files are already in the repo and will render automatically in the README:
+
+| File | What It Shows |
+|------|---------------|
+| `sms-booking-conversation.svg` | SMS conversation flow — demo booking then emergency escalation |
+| `telegram-booking-notification.svg` | Telegram notification for new booking with approve/edit/decline |
+| `telegram-escalation-alert.svg` | Telegram escalation alert with customer details and conversation context |
+
+## Optional Real Screenshots (for maximum impact)
+
+The SVGs above work great on GitHub, but if you want to replace them with real screenshots for maximum hiring manager impact, here's what to capture:
 
 ---
 

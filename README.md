@@ -10,6 +10,22 @@ Demo: Call or text **(949) 565-1908** 24/7 and experience the full autonomous wo
 
 ---
 
+## Screenshots
+
+### SMS Booking + Escalation Flow
+![SMS Conversation](media/sms-booking-conversation.svg)
+*A real SMS conversation: customer books a demo, then an emergency escalation triggers immediate owner notification via Telegram.*
+
+### Telegram Owner Notifications
+<div align="center">
+  <img src="media/telegram-booking-notification.svg" width="420" alt="Telegram Booking Notification"/>
+  <img src="media/telegram-escalation-alert.svg" width="420" alt="Telegram Escalation Alert"/>
+</div>
+
+*Left: New booking notification with approve/edit/decline actions. Right: Escalation alert with customer details and conversation context.*
+
+---
+
 ## The Problem
 
 Service business owners lose **5+ hours/week** on phone tag, scheduling, and invoicing. A traditional receptionist costs **$3,100/mo**. Voicemail is a black hole — most callers don't leave messages.
