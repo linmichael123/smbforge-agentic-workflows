@@ -1,83 +1,13 @@
-# Git Setup Commands
+# How I Built & Deployed This
 
-Run these in order to create the repo and push it to GitHub.
+**From scratch to production in 4 weeks — solo, $0 fixed-cost infra.**
 
-```bash
-# 1. Navigate to the repo
-cd ~/smbforge-agentic-workflows
+1. **Conversational prototype → multi-agent system** — started with a single LLM prompt that handled SMS conversations. Iterated through 5+ major architecture revisions as real customers hit edge cases. Broke it into specialized agents (SMS, voice, escalation) with an orchestrator routing between them.
 
-# 2. Initialize git
-git init
+2. **Picked the cheapest stack that could scale** — Cloudflare Workers + D1 (SQLite) + KV. Everything runs on the $0 free tier. Telnyx for SMS/voice at ~$50/mo. Google Calendar/Sheets APIs for scheduling/invoicing. No VMs, no containers, no monthly bills to worry about.
 
-# 3. Create .gitignore
-cat > .gitignore << 'EOF'
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-.env
-.venv/
+3. **Built the owner interface in Telegram** — 27 tool declarations, all LLM-native. No custom dashboard to build or maintain. The owner approves bookings, manages campaigns, and monitors escalations from a single Telegram chat.
 
-# OS
-.DS_Store
-Thumbs.db
+4. **Deployed with determinism** — Cloudflare Workers deployed via Wrangler CLI. macOS LaunchAgents schedule outreach and maintenance tasks. All secrets in Workers secrets (not env files). Production demo line live at **(949) 565-1908** on day one.
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Screenshots (large files — add manually if needed)
-media/*.png
-media/*.jpg
-media/*.jpeg
-EOF
-
-# 4. Add all files
-git add -A
-
-# 5. Commit
-git commit -m "Initial commit: SMB Forge agentic workflows — production multi-agent AI system for service business automation
-
-- Multi-agent architecture: SMS, voice, onboarding, quality monitoring
-- 3-journey conversation model: booking, ordering, escalation
-- Human-in-the-loop via Telegram owner bot
-- Full docs: architecture, booking flow, invoicing, production metrics
-- MIT License
-- Safe, abstracted code examples — no secrets, no PII"
-
-# 6. Create GitHub repo
-gh repo create smbforge-agentic-workflows \
-  --public \
-  --description "Production multi-agent AI system that serves as the full back office for service businesses (plumbers, electricians, cleaners, etc.). Autonomous SMS/Telegram agents handle 24/7 call answering, booking, ordering, invoicing, and owner escalation." \
-  --homepage https://smbforge.com \
-  --license MIT \
-  --push
-
-# 7. Add topics
-gh repo edit linmichael123/smbforge-agentic-workflows \
-  --add-topic ai-agents \
-  --add-topic agentic-ai \
-  --add-topic multi-agent \
-  --add-topic llm-workflows \
-  --add-topic production-ai \
-  --add-topic smb-automation \
-  --add-topic google-calendar-integration \
-  --add-topic telegram-bot \
-  --add-topic autonomous-workflows
-
-# 8. Verify
-echo "✅ Repo created: https://github.com/linmichael123/smbforge-agentic-workflows"
-echo "   Live at: smbforge.com"
-echo "   Demo: Call/text (949) 565-1908"
-```
-
-## After Setup — Take Screenshots
-
-Once the repo is live, add screenshots to the `/media` folder per the instructions in `media/README.md`. The README currently has embedded Mermaid diagrams that render beautifully, but real screenshots make it pop for hiring managers.
-
-## Live URL
-
-After running the commands above:
-**https://github.com/linmichael123/smbforge-agentic-workflows**
+**Stack:** TypeScript + Hono · Cloudflare Workers/D1/KV · Telnyx · Gemini 2.5 Flash · Telegram Bot API · Google Calendar/Sheets · Stripe

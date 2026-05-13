@@ -208,6 +208,7 @@ Explore the [detailed production metrics](docs/results-metrics.md) for full tabl
 ```
 smbforge-agentic-workflows/
 ├── README.md                  ← This file
+├── SETUP.md                   ← Build & deploy story (4 weeks, solo)
 ├── LICENSE                    ← MIT
 ├── architecture/
 │   ├── workflow-diagram.md    ← End-to-end customer flow (Mermaid)
