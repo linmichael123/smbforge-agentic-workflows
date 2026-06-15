@@ -6,6 +6,15 @@ No SaaS subscriptions. No vendor lock-in. Just TypeScript, Hono, and zero-depend
 
 ---
 
+## ⬇️ Quick Download
+
+Want the source as a deploy-ready ZIP? Grab the latest release:
+**[SMB Forge v0.1.0 →](https://github.com/linmichael123/smbforge-agentic-workflows/releases/latest)**
+
+Each ZIP includes LICENSE, README, and all source — `unzip` → `npm install` → `wrangler deploy`.
+
+---
+
 ## 🗓️ AI Scheduler — $29
 
 Google Calendar conversational booking agent. Handles `list_free_slots`, `book_appointment`, `cancel_appointment` via LLM tool calls.
