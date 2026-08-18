@@ -1,5 +1,7 @@
 # Multi-Agent Architecture
 
+> **Context:** This architecture shows the production system these templates were extracted from. The standalone templates simplify this into single-agent patterns for specific workflows (scheduling, invoicing, ordering).
+
 Breakdown of the autonomous agent system, agent roles, and how they collaborate.
 
 ```mermaid

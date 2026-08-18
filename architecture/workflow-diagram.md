@@ -1,6 +1,8 @@
 # Customer Workflow Diagram
 
-Full end-to-end flow of a customer interaction with SMB Forge's autonomous agent system.
+> **Context:** This diagram shows the full production system these templates were extracted from. The standalone templates (scheduler, invoicing, ordering) cover the specific tool-calling patterns shown here.
+
+Full end-to-end flow of a customer interaction with the production agent system.
 
 ```mermaid
 flowchart TD
